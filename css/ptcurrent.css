@@ -1,0 +1,734 @@
+
+@media only screen and (min-width : 668px) {
+
+    /*body styling*/
+    #bodystyle {
+        color: #5b5b5b;
+        font-size: 13pt;
+        line-height: 1.6em;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: top center;
+        background-size: 60% 200px;
+    }
+    .modal-content {
+        width: auto;
+    }
+
+    div.photos {
+        /* Prevent vertical gaps */
+        line-height: 1px;
+        -webkit-column-count: 4;
+        -webkit-column-gap:   0px;
+        -moz-column-count:    4;
+        -moz-column-gap:      0px;
+        column-count:         4;
+        column-gap:           1px;
+
+    }
+}
+/*phones*/
+@media only screen 
+and (min-width : auto)
+and (max-width : auto){ 
+
+
+    #bodystyle {
+        line-height: 1.25;
+        color: #5b5b5b;
+        font-size: 13pt;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: top center;
+        background-size: auto;
+    }
+    .modal-content {
+        width: 100%;
+    }
+
+    div.photos {
+        /* Prevent vertical gaps */
+        line-height: 1px;
+
+        -webkit-column-count: 2;
+        -webkit-column-gap:   0px;
+        -moz-column-count:    2;
+        -moz-column-gap:      0px;
+        column-count:         2;
+        column-gap:           1px;
+
+    }
+
+
+}
+
+/*page title styling - it is put fixed on the right side of the page*/
+#pagelink {
+    clear: both;
+}
+#pagelink {
+    position: fixed;
+    width: 80px;
+    font-size: 1.1em;
+    right: 0px;
+    top: 30%;
+    /* float:right; */
+    transform: rotate(0deg);
+    transform-origin: 40% 30%;  
+    opacity: 0.7;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 2px #9999ff solid;
+    border-style:none;
+    border-bottom-style: solid;
+    padding: 5px;
+    box-shadow: 1px 1px 5px #ccccff;
+}
+
+/*overall table styling*/
+table{
+    margin-top:10px;
+    border-collapse: collapse;
+}
+
+/*table - header row styling*/
+tr.trheader {
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    border-bottom: 2px solid #8e8e8e;
+}
+
+/*cell styling - we are styling number cells only - allow some space and align figures right*/
+/*changed*/
+td{
+    text-align: right;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+td.textcell {
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+/* table row styling - only bottom border*/
+tr{
+    border-bottom: 1px solid #8e8e8e;
+}
+
+/* table row styling - only bottom border*/
+tr.child{
+    border-bottom: 1px solid #8e8e8e;
+    font-size: 12px;
+}
+
+/*Week 5 - NN*/
+tr.future{
+    background-color: #ccccff;
+}
+
+/*column headers and row "headers", i.e. all values in the first col*/
+th.tdheader, td.tdheader {
+    text-align: left;
+    vertical-align: middle;
+    padding: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-width: 0px 1px 1px 0px;
+    border:none;
+}
+
+/* document wrapper - overall document width and positioning*/
+.wrapper {
+    width: auto;
+    margin:0 auto;
+}
+
+
+/*common headers styling*/
+h1, h2, h3, h4{
+    font-weight: 200;
+    color: #483949;
+    line-height: 1.25em;
+    text-align: center;
+}
+
+/*page title styling - it is put fixed on the left side of the page*/
+.pagetitle > header > h1{
+    position: fixed;
+    font-size: 1.2em;
+    margin-top: 24em;
+    left:1.1em;
+    transform: rotate(-90deg);
+    transform-origin: left bottom;
+    float: left;
+    opacity: 0.7;
+}
+
+/* header2 styling*/
+h2{
+    display: block;
+    font-size: 1.2em;
+    color: black;
+    text-align: left;
+    line-height: 1.25em;
+    opacity: 0.8;
+}
+
+/* header3 styling*/
+h3 {
+    display: block;
+    font-size: 1.10em;
+    font-weight: bold;
+    margin-top: 50px;
+    padding: 8px;
+    background-color: white;
+    vertical-align: middle;
+    border-bottom: 2px solid #8e8e8e;
+}
+
+/* ensure uniform sizing*/
+*:before,*:after{
+    box-sizing: border-box;
+}
+
+/*paragraph styling*/
+p{
+    text-align: justify;
+}
+
+/* header styling*/
+header{
+
+    text-align: left;
+}
+
+/* title of the page spacing - make sure it has sufficient space from top and then inside the box*/
+.wrapper > header > h1{
+    display:block;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0.5em;
+    font-size: 1.5em;
+}
+
+/*class to hide live feedback divs if live feedback is off*/
+.reveal-hidden{
+    display: none !important;
+    overflow:hidden;
+}
+
+/*class to reveal feedback to user, if live feedback is on*/
+/*loosely based on https://css-tricks.com/exposing-form-fields-radio-button-css/*/
+.reveal-transition {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    font-size: 12pt;
+    transform: scale(0.8);
+    transition: 0.5s;
+}
+
+/*styling of the revealed feedback labels*/
+/*changed*/
+.reveal-transition label {
+    white-space: nowrap;
+    display: inline-block;
+    margin: 0 0 3px 0;
+}
+
+/*change of styling on checked attribute change for radio buttons and
+  checkboxes check*/
+/*changed*/
+input[type="radio"]:checked ~ .reveal-transition, 
+input[type="checkbox"]:checked ~ .reveal-transition {
+    opacity: 1;
+    padding: 10px 20px;
+    max-height: 29em;
+    transform: scale(1);
+    overflow: visible;
+    background-color: #ccffcc;
+}
+
+.reveal-transition-show {
+    opacity: 1;
+    padding: 10px 20px;
+    max-height: 20em;
+    transform: scale(1);
+    overflow: visible;
+    font-size:12px;
+}
+
+.pricingcols{
+    width: 960px;
+}
+
+.cols{
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+}
+.cols > li{
+    position: relative;
+    float:left;
+    text-align: center;
+    width: 49%;
+}
+
+.plan {
+    display:block;
+    margin-right: 1em;
+    font-size: 1em;
+    text-align: justify;
+    height:5em;
+    opacity: 0.8;
+    padding: 0.5em;
+    border-bottom-style: solid;
+    border-bottom-color: gray;
+    border-bottom-width: 1px;
+    border-bottom-right-radius: 0.5em;
+    border-right-style: solid;
+    border-right-color: gray;
+    border-right-width: 1px;
+    box-shadow: 3px 3px 8px 3px  #ccccff;
+}
+
+.cols > li > h2 {
+    display: block;
+    font-size: 1.2em;
+    color: black;
+    text-align: left;
+    line-height: 1.25em;
+    opacity: 0.8;
+}
+
+/*buttons styling*/
+.btn {
+    background-color:#ffffff !important;
+    border-radius:11px;
+    border:1px solid #8e8e8e !important;
+    display:inline-block;
+    cursor:pointer;
+    color:#8e8e8e !important;
+    font-size:16px;
+    padding:10px 30px;
+    text-decoration:none;
+    margin-top: 10px;
+    margin-right: 10px;
+    -webkit-appearance: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.btn-block + .btn-block {
+    margin-top: 5px;
+}
+
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+    width: 100%;
+}
+
+/*changed*/
+.btnsmaller{
+    padding: 3px 20px;
+}
+
+/*changed*/
+.btnexpand{
+    margin-top: -1px;
+    padding: 2px 10px;
+}
+
+/*changed*/
+.btndefaultsmaller{
+    background-color:#c5c5c5;
+}
+
+/*buttons styling on hover*/
+.btn:hover {
+    background-color: #c5c5c5;
+}
+
+/*buttons styling on active state*/
+.btn:active {
+    position:relative;
+    top:1px;
+
+}
+
+/*on-off switch button styling*/
+.switchbtn{
+
+    background-color:#ffffff;
+    border-radius:8px;
+    border:1px solid #8e8e8e;
+    display:inline-block;
+    cursor:pointer;
+    color:#8e8e8e;
+    font-size:14px;
+    padding: 2px 10px;
+    text-decoration:none;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -webkit-appearance: none;
+}
+
+.switchbtn:hover{
+    transition: all 0.5s ease-in-out;
+    border-color: #9999ff;
+    color: #9999ff;
+}
+
+/*on-off switch button pressed state styling*/
+.pressed{
+    background-color:#c5c5c5 !important;
+    color: #707070;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+/*on-off switch buttons section styling*/
+.switcher{
+    position:relative;
+
+}
+
+/* title of the page spacing - make sure it has sufficient space from top and then inside the box*/
+.spacing {
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5em;
+}
+
+/* nav bar styling */
+#nav {
+    width:960px;
+    margin: 0 auto;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+    padding: 1em 0 1em 0;
+    background: #e8ecff;
+}
+
+/*menu item styling*/
+#nav > ul > li {
+    display: inline;
+    margin: -10px 0.5em 0 0.5em;
+    padding: 0.45em;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+/* menu item link hover styling */
+#nav > ul > li > a:hover{
+    color: #e97eb2;
+    transition:  color 0.35s ease-in-out;
+}
+/*menu item hover styling - i.e. border*/
+#nav > ul > li:hover{
+    border-color: #e97eb2;
+    border-bottom-color: #e97eb2;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    transition: border-color 0.5s ease-in-out;
+}
+/*styling of nav bar unordered menu items, removing line breaks*/
+.limenuitem{
+    white-space: nowrap;
+}
+
+.editbox input[type="text"], input[type="list"] {
+    padding: 10px;
+    margin-right: 20px;
+    border: solid 1px #dcdcdc;
+    transition: box-shadow 0.3s, border 0.3s;
+}
+
+.editbox input[type="list"]:focus, 
+.editbox input[type="list"].focus,
+.editbox input[type="text"]:focus, 
+.editbox input[type="text"].focus {
+    border: solid 1px #707070;
+    box-shadow: 0 0 5px 1px #969696;
+}
+
+.radio{
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+
+}
+
+.radio > label {
+
+    display: inline-block;
+    width: 10.5em;
+    text-align: right;
+}
+
+/*special links highlightning*/
+a, a:link,a:visited {
+    font: inherit;
+    color: #9999ff;
+    background: inherit;
+    font-style: inherit;
+    text-decoration: none;
+}
+
+/*correction through inspecting the element in Chrome, because the above didn't seem to work*/
+a:-webkit-any-link {
+    font: inherit;
+    color: #9999ff;
+    background: inherit;
+    font-style: inherit;
+    text-decoration: none;
+}
+
+.sitemapfootermenu{
+
+    width: 100%;
+    display:block;
+    float: left;
+    margin-top: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+}
+.sitemapfootermenu ul > li{
+    list-style: none;
+    margin: 1.5em;
+    float: left;
+    min-height: 80px;
+    text-align: left;
+    color: black;
+}
+
+.sitemapfootermenu ul > li a{
+    color: #9999ff;
+}
+
+.sitemapfootermenu img{
+    float: right;
+}
+
+.footercopyright{
+    overflow:hidden;
+    font-size: 12px;
+    display:block;
+    float:left;
+}
+
+/*changed*/
+.amount{
+    text-align: right;
+}
+
+/*changed*/
+.datealign{
+    text-align: right;
+}
+
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 7px;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+}
+
+div.panel.show {
+    opacity: 1;
+    overflow-y: scroll;
+    max-height: 500px; 
+}
+
+button.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+div.photos {
+    line-height: 1px;
+    padding: 5px;
+    -webkit-column-count: 5;
+    -webkit-column-gap:   0px;
+    -moz-column-count:    5;
+    -moz-column-gap:      0px;
+    column-count:         5;
+    column-gap:           1px;
+}
+
+div.photos.img {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.photo:hover {
+    position: relative;
+    top: -5px;
+    cursor: pointer;
+}
+.photo{
+    transition: 0.3s;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: scroll; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 960px;
+}
+
+/* Modal Content (Image) */
+.modal-content.showfull {
+    margin: auto;
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: none;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content, #caption { 
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+div.photos.file {
+    position:relative;
+    display: block;
+    line-height: 1.1em;
+    width: 100%;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+div.file:after {
+    float:left;
+    margin-right: 5px;
+    content: 'file';
+    font-style: italic;
+    color: #5b5b5b;
+    font-size:11px;
+}
+
+div.ampdescription{
+    font-size: 0.8em;
+    line-height: 1.4em;
+}
+div.ampdescription > h3{
+    display: block;
+    margin: 5px 5px;
+    line-height: 1em;
+    margin-top: 0px;
+}
